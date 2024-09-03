@@ -29,13 +29,25 @@ const currentComponent = computed(() => {
       return null // O un componente por defecto si lo prefieres
   }
 })
+
+const stepTitles = [
+  'Sección I',
+  'Sección II',
+  'Sección III',
+  'Sección IV',
+  'Sección V'
+]
 </script>
 
 <template>
   <div class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
     <div class="w-full max-w-3xl bg-white rounded-lg shadow-md p-6">
-      <ProgressSteps :current-step="currentStep" :total-steps="totalSteps" />
-    
+      <ProgressSteps 
+        :current-step="currentStep" 
+        :total-steps="totalSteps"
+        :step-titles="stepTitles"
+      />
+      
       <div class="mt-6 w-full">
         <!-- <p class="text-sm font-semibold mb-4 text-gray-700">Paso {{ currentStep }} de {{ totalSteps }}</p> -->
         
